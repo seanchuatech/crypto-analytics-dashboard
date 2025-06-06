@@ -20,8 +20,10 @@ export default function HomePage() {
     });
 
     if (res?.error) {
+      console.log('logged in failed')
       setError('Invalid username or password');
     } else {
+      console.log('logged in success')
       router.push('/dashboard');
     }
   };
